@@ -34,4 +34,13 @@
       file:
         path: /tmp/index.html
         state: absent
+
+- hosts: appdbs
+  gather_facts: false
+  become: true
+  tasks:
+   - name: Remove pgsql dir
+     file:
+       path: /var/lib/pgsql/data
+       state: absent
 ...
