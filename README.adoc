@@ -8,8 +8,8 @@ The entry point, `main.yml` contains multiple _good enough_ plays, and some redu
 
 Set up an application that:
 
-* Sets up a `frontend1` haproxy server which load balances requests to http://frontend1.<GUID>.example.opentlc.com.
-** Requests to `frontend1` come in on port 80
+* Sets up a `frontend0` haproxy server which load balances requests to http://http://frontend0.${GUID}.${DOMAIN}.
+** Requests to `frontend0` come in on port 80
 ** Load balance requests to servers in the group `apps`, listening on port 8080
 * Set up one or more tomcat servers, the group `apps`, to:
 ** Serve the included HTML content from ` /usr/share/tomcat/webapps/ROOT/index.html`
